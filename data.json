@@ -1,9 +1,17 @@
 {
   "orgs": [
-    "adventure-js"
+
   ],
   "individualRepos": [
-    "RichardLitt/maintainer-dashboard",
-    "RichardLitt/knowledge"
-  ]
+    "devitocodes/devito",
+    "cgre-aachen/gempy",
+    "simpeg/simpeg",
+    "equinor/segyio",
+    "trhallam/segysak",
+    "kinverarity1/lasio",
+    "agile-geoscience/welly",
+    "agile-geoscience/striplog",
+    "agile-geoscience/bruges"
+  ],
+  "token": "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",
 }

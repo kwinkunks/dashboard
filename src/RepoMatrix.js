@@ -1,12 +1,6 @@
 /*
- * decaffeinate suggestions:
- * DS101: Remove unnecessary use of Array.from
- * DS102: Remove unnecessary code created because of implicit returns
- * DS206: Consider reworking classes to avoid initClass
- * DS207: Consider shorter variations of null checks
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
+ * Build the matrix.
  */
-
 const { round, size, split } = require('lodash')
 const $ = require('jquery')
 const lib = require('./lib/')
@@ -38,12 +32,12 @@ let RepoMatrix = (() => {
               th({ class: 'left files', colspan: 2, style: 'background-color:blue' }, () => 'Files')
               th({ class: 'left sections', colspan: size(vitality.readme.items), style: 'background-color:orange' }, () => 'Sections')
               // th({ class: 'left badges', colspan: size(vitality.readme.badges) }, () => 'Badges')
-              return th({ class: 'left', colspan: 3, style: 'background-color:black' }, () => 'Github')
+              return th({ class: 'left', colspan: 3, style: 'background-color:black' }, () => 'GitHub')
             })
             return tr(() => {
               th({ class: 'left repo' }, () => 'Repo') // Name
               th(() => 'README') // README.md
-              th(() => '> 500 chars') // README.md
+              th(() => '>500 chars') // README.md
               th(() => 'LICENSE') // Files
               th(() => 'CONTRIBUTING') // Files
               for (name in vitality.readme.sections) {
@@ -117,11 +111,11 @@ let RepoMatrix = (() => {
           })
         } else if (success) {
           return div({ class: 'success' }, () => {
-            i({ class: 'mdi mdi-checkbox-blank-circle-outline' }, () => '✓')
+            span({ class: 'material-icons' }, () => 'task_alt')
           })
         } else {
           return div({ class: 'failure' }, () => {
-            i({ class: 'mdi mdi-checkbox-blank-circle' }, () => '✗')
+            span({ class: 'material-icons' }, () => 'radio_button_unchecked')
           })
         }
       })

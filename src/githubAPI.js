@@ -3,12 +3,17 @@ const Promise = require('bluebird')
 const Octokat = require('octokat')
 const { flatten, sortBy } = require('lodash')
 const config = require('../data.json')
+const dotenv = require('dotenv');
+dotenv.config();
 
 const opts = {
   token: config.token || process.env.MAINTAINER_DASHBOARD,
   endpoint: config.rootURL, // For gh-get deps
   rootURL: config.rootURL // For Octokat
 }
+
+// This is not working.
+console.log(`TOKEN -> ${process.env.MAINTAINER_DASHBOARD}`);
 
 const github = new Octokat(opts)
 
@@ -79,6 +84,7 @@ function getFiles (repos) {
             }
           })
       } else if (file.name === 'license') {
+        // console.log(`Licence attempt: ${github.repos(repo.fullName).licenses.fetch().then(res => res.readBinary())}`);
         return github.fromUrl(`/repos/${repo.fullName}/license`).fetch()
           .then(res => res.readBinary())
           .then(res => (repo.files[file.name.toUpperCase()] = res))

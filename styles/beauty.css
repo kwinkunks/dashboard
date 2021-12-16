@@ -1,18 +1,3 @@
-/* from https://datatables.net/media/blog/beautiful_tables/complete.html */
-
-/*
- * Colour dictionary:
- *
- * Table control elements:   #719ba7
- * Header cells:             #66A9BD
- * Body header cells:        #91c5d4
- * Body content cells:       #d5eaf0
- * Body content cells (alt): #bcd9e1
- * Footer header:            #b0cc7f
- * Footer content:           #d7e1c5
- */
-
-
 /*
  * Page setup styles
  */
@@ -41,7 +26,7 @@ h1 {
  */
 div.dataTables_wrapper {
 	overflow:auto;
-	background-color: #719ba7;
+	background-color: #aaaaaa;
 }
 
 div.dataTables_length {
@@ -103,7 +88,7 @@ table.pretty th {
 /* Header cells */
 table.pretty thead th {
 	text-align: center;
-	background: #66a9bd;
+	background: #aaaaaa;
 }
 
 /* Body cells */
