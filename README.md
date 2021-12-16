@@ -12,13 +12,14 @@ Simply clone this repo.
 
 ### Local development
 
+To start:
+
+    npm i
+    npm run build
+
 To recompile continuously, and start a development server with hot reloading:
 
-    npm run dev
-
-To build minified javascript for production:
-
-    npm run build
+    npm run serve-watch
 
 ### Token
 

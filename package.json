@@ -1,8 +1,8 @@
 {
-  "name": "swung-dashboard",
+  "name": "dashboard",
   "version": "0.0.1",
-  "description": "Software Underground GitHub Dashboard",
-  "author": "hello@softwareunderground.org>",
+  "description": "GitHub Dashboard",
+  "author": "matt@softwareunderground.org>",
   "license": "MIT",
   "private": true,
   "scripts": {
