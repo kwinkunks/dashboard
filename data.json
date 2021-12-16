@@ -3,15 +3,9 @@
 
   ],
   "individualRepos": [
-    "devitocodes/devito",
-    "cgre-aachen/gempy",
-    "simpeg/simpeg",
-    "equinor/segyio",
-    "trhallam/segysak",
-    "kinverarity1/lasio",
     "agile-geoscience/welly",
     "agile-geoscience/striplog",
     "agile-geoscience/bruges"
   ],
-  "token": "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",
+  "token": "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"
 }

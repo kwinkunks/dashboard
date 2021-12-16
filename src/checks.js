@@ -63,7 +63,7 @@ function checkVitality (files, fullName, stargazersCount, openIssuesCount) {
     readme: {
       content: files.README,
       charLength: function () {
-        return (this.content) ? (this.content.length > 500) : 'na'
+        return (this.content) ? this.content.length : 'na'
       },
       sections: README_SECTIONS,
       other: README_OTHER,

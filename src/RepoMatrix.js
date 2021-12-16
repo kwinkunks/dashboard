@@ -37,7 +37,7 @@ let RepoMatrix = (() => {
             return tr(() => {
               th({ class: 'left repo' }, () => 'Repo') // Name
               th(() => 'README') // README.md
-              th(() => '>500 chars') // README.md
+              th(() => 'Chars') // README.md
               th(() => 'LICENSE') // Files
               th(() => 'CONTRIBUTING') // Files
               for (name in vitality.readme.sections) {
@@ -73,7 +73,7 @@ let RepoMatrix = (() => {
                 vitality = checkVitality(files, fullName, stargazersCount, openIssuesCount)
 
                 td({ class: 'no-padding' }, () => this.renderCheck(vitality.readme.content)) // README.md
-                td({ class: 'no-padding' }, () => this.renderCheck(vitality.readme.charLength())) // README.md
+                td(() => (vitality.readme.charLength() ? text(vitality.readme.charLength()) : ' ')) // README.md - Just show length, instead of checking if > 500 chars
                 td({ class: 'no-padding' }, () => this.renderCheck(vitality.license)) // Files
                 td({ class: 'no-padding' }, () => this.renderCheck(vitality.contribute)) // Files
                 for (name in vitality.readme.items) {
