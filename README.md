@@ -12,6 +12,10 @@ Simply clone this repo.
 
 ### Local development
 
+Get a GitHub personal access token with `public-repo` permission and create `secret.json` with content like:
+
+    {"token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}
+
 To start:
 
     npm i
@@ -20,10 +24,6 @@ To start:
 To recompile continuously, and start a development server with hot reloading:
 
     npm run serve-watch
-
-### Token
-
-You will need a GitHub token in order to have more requests available to you, as this is a very request-heavy tool (it does not cache anything). Set it in your environment as `MAINTAINER_DASHBOARD`, or include this token in the `data.json` config in a `token` field.
 
 ### Enterprise
 
