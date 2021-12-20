@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
-    "prep": "mkdirp dist",
+    "prep": "mkdirp dist && copyfiles .env dist",
     "copy-styles": "concat styles/beauty.css styles/app.css > dist/bundle.css",
     "watch-styles": "concat styles/beauty.css styles/app.css -o dist/bundle.css",
     "build-css": "npm run copy-styles && concat node_modules/datatables.net-dt/css/jquery.dataTables.css node_modules/datatables.net-fixedheader-dt/css/fixedHeader.dataTables.css > dist/datatables.css",

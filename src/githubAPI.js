@@ -3,19 +3,16 @@ const Promise = require('bluebird')
 const Octokat = require('octokat')
 const { flatten, sortBy } = require('lodash')
 const config = require('../data.json')
-const dotenv = require('dotenv');
-dotenv.config();
+const secret = require('../secret.json')
+
 
 const opts = {
-  token: config.token || process.env.MAINTAINER_DASHBOARD,
+  token: secret.token,
   endpoint: config.rootURL, // For gh-get deps
   rootURL: config.rootURL // For Octokat
 }
 
-// This is not working.
-console.log(`TOKEN -> ${process.env.MAINTAINER_DASHBOARD}`);
-
-const github = new Octokat(opts)
+const github = new Octokat(opts);
 
 const ORGS = config.orgs || []
 const INDIVIDUAL_REPOS = config.individualRepos || []
